@@ -1,0 +1,25 @@
+options(repr.plot.width = 13, repr.plot.height = 6)
+
+p1 <- ggstatsplot::ggbetweenstats(
+  data = w,
+  x = new_SBS4,
+  y = SVs_in_sample, xlab = "SBS4 Mutations", ylab = "SV Burden", title = "Lung-AdenoCA",
+    messages = TRUE,  results.subtitle = FALSE, ggplot.component = list(theme(text = element_text(size = 7))), centrality.label.args = list(size  = 2), centrality.point.args = list(size = 1, color = "darkred"), plot.type = "box", type = "parametric", subtitle="p=0.92", effsize.type = "biased") + theme(plot.title=element_text(size=7))
+
+options(repr.plot.width = 13, repr.plot.height = 6)
+
+p2 <- ggstatsplot::ggbetweenstats(
+  data = w,
+  x = new_SBS4,
+  y = PGA_sample, xlab = "SBS4 Mutations", ylab = "Percent Aberrant Genome", title = "Lung-AdenoCA",
+    messages = TRUE,  results.subtitle = FALSE, ggplot.component = list(theme(text = element_text(size = 7))), centrality.label.args = list(size  = 2), centrality.point.args = list(size = 1, color = "darkred"), plot.type = "box", type = "parametric", subtitle="p=0.66", effsize.type = "biased") + theme(plot.title=element_text(size=7))
+
+ggstatsplot::combine_plots(
+  plotlist = list(p1,p2),
+    theme = theme(
+      plot.subtitle = element_text(size = 10),
+      plot.title = element_text(size = 10)
+  )
+)
+
+ggsave(filename = "new.tiff", device = "tiff", units="in", width=6, height=3, dpi=300)
