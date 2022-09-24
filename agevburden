@@ -1,0 +1,40 @@
+options(repr.plot.width = 40, repr.plot.height = 20)
+
+
+p1 <- ggstatsplot::ggscatterstats( data = BiliaryAdenoCA, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), xlab = 'Donor Age at Diagnosis', ylab = 'Total SV Burden', ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("BiliaryAdenoCA") +
+  theme(plot.title=element_text(size=7)) + theme(axis.text=element_text(size=5)) + theme(axis.title.x = element_text(size = 5), axis.title.y = element_text(size = 5))
+p2 <- ggstatsplot::ggscatterstats( data = CNSMedullo, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("CNSMedullo") + theme(axis.title.y=element_blank()) + theme(axis.title.x=element_blank()) +
+  theme(plot.title=element_text(size=7)) + theme(axis.text=element_text(size=5))
+p3 <- ggstatsplot::ggscatterstats( data = CNSPiloAstro, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("CNSPiloAstro") + theme(axis.title.y=element_blank()) + theme(axis.title.x=element_blank()) +
+  theme(plot.title=element_text(size=7))+ theme(axis.text=element_text(size=5))
+p4 <- ggstatsplot::ggscatterstats( data = EsoAdenoCA, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("EsoAdenoCA") + theme(axis.title.y=element_blank()) + theme(axis.title.x=element_blank()) +
+  theme(plot.title=element_text(size=7))+ theme(axis.text=element_text(size=5))
+p5 <- ggstatsplot::ggscatterstats( data = KidneyRCC, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("KidneyRCC") + theme(axis.title.y=element_blank()) + theme(axis.title.x=element_blank()) +
+  theme(plot.title=element_text(size=7))+ theme(axis.text=element_text(size=5))
+p6 <- ggstatsplot::ggscatterstats( data = LiverHCC, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), xlab = 'Donor Age at Diagnosis', ylab = 'Total SV Burden', ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("LiverHCC") +
+  theme(plot.title=element_text(size=7)) + theme(axis.text=element_text(size=5)) + theme(axis.title.x = element_text(size = 5), axis.title.y = element_text(size = 5))
+p7 <- ggstatsplot::ggscatterstats( data = LymphBNHL, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("LymphBNHL") + theme(axis.title.y=element_blank()) + theme(axis.title.x=element_blank()) +
+  theme(plot.title=element_text(size=7))+ theme(axis.text=element_text(size=5))
+p8 <- ggstatsplot::ggscatterstats( data = LymphCLL, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("LymphCLL") + theme(axis.title.y=element_blank()) + theme(axis.title.x=element_blank()) +
+  theme(plot.title=element_text(size=7))+ theme(axis.text=element_text(size=5))
+p9 <- ggstatsplot::ggscatterstats( data = OvaryAdenoCA, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("OvaryAdenoCA") + theme(axis.title.y=element_blank()) + theme(axis.title.x=element_blank()) +
+  theme(plot.title=element_text(size=7))+ theme(axis.text=element_text(size=5))
+p10 <- ggstatsplot::ggscatterstats( data = PancAdenoCA, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("PancAdenoCA") + theme(axis.title.y=element_blank()) + theme(axis.title.x=element_blank()) +
+  theme(plot.title=element_text(size=7))+ theme(axis.text=element_text(size=5))
+p11 <- ggstatsplot::ggscatterstats( data = PancEndocrine, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), xlab = 'Donor Age at Diagnosis', ylab = 'Total SV Burden', ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("PancEndocrine") +
+  theme(plot.title=element_text(size=7)) + theme(axis.text=element_text(size=5)) + theme(axis.title.x = element_text(size = 5), axis.title.y = element_text(size = 5))
+p12 <- ggstatsplot::ggscatterstats( data = ProstAdenoCA, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("ProstAdenoCA") + theme(axis.title.y=element_blank()) + theme(axis.title.x=element_blank()) +
+  theme(plot.title=element_text(size=7))+ theme(axis.text=element_text(size=5))
+p13 <- ggstatsplot::ggscatterstats( data = SkinMelanoma, x = 'donor_age_at_diagnosis', y = 'Total_Burden', point.args = list(size=0.5, alpha = 0.5), ggplot.component = list(theme(text = element_text(size = 3))), results.subtitle = FALSE, marginal = FALSE) + ggpubr::stat_cor(rr.label = TRUE, p.label = TRUE, size = 2) + ggtitle("SkinMelanoma") + theme(axis.title.y=element_blank()) + theme(axis.title.x=element_blank()) +
+  theme(plot.title=element_text(size=7))+ theme(axis.text=element_text(size=5))
+
+ggstatsplot::combine_plots(
+  plotlist = list(p1, p2, p3, p4,p5, p6,p7,p8, p9, p10,p11,p12, p13),
+  plotgrid.args = list(nrow = 3),
+    theme = theme(
+      plot.subtitle = element_text(size = 20),
+      plot.title = element_text(size = 30)
+  )
+)
+
+ggsave(filename = "test.tiff", device = "tiff", units="in", width=8, height=4, dpi=300, compression = 'lzw')
